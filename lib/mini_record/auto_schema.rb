@@ -20,7 +20,7 @@ module MiniRecord
           ActiveRecord::ConnectionAdapters::TableDefinition.new(connection.native_database_types, table_name, false, {}, nil)
         when -2
          # Rails 5
-         ActiveRecord::ConnectionAdapters::TableDefinition.new(table_name, false, {}, nil)
+         ActiveRecord::ConnectionAdapters::TableDefinition.new(table_name, false, {}, nil, nil)
         else
           raise ArgumentError,
             "Unsupported number of args for ActiveRecord::ConnectionAdapters::TableDefinition.new()"
